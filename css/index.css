@@ -1,1 +1,264 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  border: 1px solid grey;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  max-width: 100%;
+}
+.banditem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+  font-family: 'Lato', sans-serif;
+  padding: 4% 0;
+  align-items: center;
+}
+.masteralign {
+  display: flex;
+  justify-content: center;
+}
+hr {
+  border: 1px solid black;
+  width: 90%;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+  height: 1000px;
+}
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+}
+.container .leftband {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0;
+  width: 29%;
+  align-items: center;
+  background-color: #AAD2BA;
+}
+@media (max-width: 500px) {
+  .container .leftband {
+    width: 100%;
+  }
+}
+.container .leftband .leadsection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+  font-family: 'Lato', sans-serif;
+  padding: 4% 0;
+  align-items: center;
+}
+@media (max-width: 500) {
+  .container .leftband .leadsection nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container .leftband .leadsection nav a {
+  border-bottom: black solid 1px;
+}
+.container .leftband .icon-style {
+  font-size: 100px;
+}
+.container .leftband .left-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 80vh;
+}
+.container .leftband .left-details-container .detail-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+  font-family: 'Lato', sans-serif;
+  padding: 4% 0;
+  align-items: center;
+}
+.container .rightband {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0;
+  width: 69%;
+  align-items: center;
+  background-color: #D9FFF5;
+}
+@media (max-width: 500px) {
+  .container .rightband {
+    width: 100%;
+  }
+}
+.container .rightband .rightheading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+}
+.container .rightband .career-background {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+  font-family: 'Lato', sans-serif;
+  padding: 4% 0;
+  align-items: center;
+}
+.container .rightband .education-training {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+  font-family: 'Lato', sans-serif;
+  padding: 4% 0;
+  align-items: center;
+}
+.container .rightband .endsection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+  font-family: 'Lato', sans-serif;
+  padding: 4% 0;
+  align-items: center;
+}
