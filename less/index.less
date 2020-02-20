@@ -19,10 +19,10 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	border: 1px solid grey;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -50,10 +50,134 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	max-width:100%;
 }
+
+
+//variables
+@headerfont:'Montserrat', sans-serif;;
+
+@mainfont: 'Lato', sans-serif;
+
+@leftfontcolor:black;
+
+@leftbandcolor:#AAD2BA;
+
+@rightfontcolor:#6B8F71;
+
+@rightbandcolor: #D9FFF5;
+
+//mixins
+.band(){
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin:0;
+}
+.banditem{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width:80%;
+	font-family: @mainfont;
+	padding: 4% 0;
+	align-items:center;
+}
+.rightbanditem{
+
+}
+//body container
+.masteralign{
+	display: flex;
+	justify-content: center;
+}
+hr{
+	border:1px solid black;
+	width: 90%;
+}
+//begin master container
+.container{
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 80%;
+	height:1000px;
+	@media(max-width: 500px){
+		flex-direction: column;
+		height:100%;
+		width: 100%;
+	  }
+
+	//begin left band
+	.leftband{
+		.band();
+		width:29%;
+		align-items: center;
+		background-color: @leftbandcolor;
+		@media(max-width: 500px){
+			width:100%;
+		  }
+		.leadsection{
+			.banditem();
+
+			nav{
+				@media(max-width: 500){
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+				a{
+					border-bottom: black solid 1px;
+				}
+			}
+		}
+
+		.icon-style{
+			font-size: 100px;
+		}
+
+		.left-details-container{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+			height:80vh;
+			
+			.detail-item{
+				.banditem();
+			}
+		}
+	}//end left band
+	
+	//begin right band
+	.rightband{
+		.band();
+		width:69%;
+		align-items: center;
+		background-color: @rightbandcolor;
+		@media(max-width: 500px){
+			width:100%;
+		  }
+
+		.rightheading{
+			font-family: @headerfont;
+			font-size: 30px;
+		}
+		.career-background{
+			.banditem();
+		}
+		.education-training{
+			.banditem();
+		}
+		.endsection{
+			.banditem();
+		}
+	}//end right band
+}//end main container
+
+
 
